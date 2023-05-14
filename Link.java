@@ -1,6 +1,7 @@
 public class Link {
     public int iData;
     public Link next;
+
     public Link(int s) {
 
         iData = s;
@@ -14,6 +15,7 @@ public class Link {
 
 class LinkedList {
     private Link first;
+
     public LinkedList() {
         first = null;
     }
@@ -66,19 +68,19 @@ class LinkedList {
         return temp;
     }
 
-    public boolean delete(int key){
+    public boolean delete(int key) {
         Link current = first;
         Link previous = first;
-        while(current!=null){
-            if(current.iData==key){
-                if(current==first){
+        while (current != null) {
+            if (current.iData == key) {
+                if (current == first) {
                     first = first.next;
                     return true;
-                }else{
-                previous.next = current.next;
-                return true;
+                } else {
+                    previous.next = current.next;
+                    return true;
                 }
-            }else{
+            } else {
                 previous = current;
                 current = current.next;
             }
@@ -86,5 +88,22 @@ class LinkedList {
         return false;
     }
 
-
 }
+
+// Tute 3
+// Question 1
+
+// first //p0 //p1 //p2 // p3 //null
+// first //p2 //p1 //p0 //p3 //null
+
+// Link p0 = first;
+// p1 = p0.next;
+// p2 = p1.next;
+// p3 = p2.next;
+// p3.next = null;
+
+// first = Link p2;
+// p2.next = p1;
+// p1.next = p0;
+// p0.next = p3;
+// p3.next = null;
