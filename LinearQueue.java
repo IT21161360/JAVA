@@ -1,4 +1,5 @@
 public class LinearQueue {
+    
     private int front;
     private int rear;
     private int queueArrry[];

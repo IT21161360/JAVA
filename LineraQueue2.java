@@ -12,10 +12,6 @@ class LinearQueue2{
         front=0;
         rear=-1;
     }
-
-  
-    
-
     public int peekFront(){
         if(nItems==0){
             return -99;
@@ -114,22 +110,10 @@ class MainClass{
         System.out.println("The peek front :" + queue.peekFront());
 
         queue.displayQueue();
-        
 
-
-
-        
-        
-
-        
-        
-        
-       
-
-
-
-
-
+        while(!queue.isEmpty()){
+            System.out.println(queue.remove());
+        }
     
     }
 }
