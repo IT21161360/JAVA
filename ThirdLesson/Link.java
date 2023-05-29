@@ -16,7 +16,7 @@ public class Link {
 class LinkedLists{
 
     private Link first;
-
+    
     public LinkedLists(){
       first = null;
     }
