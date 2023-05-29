@@ -1,5 +1,7 @@
 package FourthLesson;
 
+import java.util.Scanner;
+
 public class Node {
     
     public int iData;
@@ -42,12 +44,18 @@ class Tree{
         return current;
     }
 
-    public void descendingOrder(){
-         if(root!=null){
-            descendingOrder();
-            
+    private void descendingOrder(Node localRoot){
+         if(localRoot!=null){
+            descendingOrder(localRoot.rightChild);
+            localRoot.displayNode();
+            descendingOrder(localRoot.leftChild);
          }
     }
+
+    public void descendingOrder(){
+        descendingOrder(root);
+    }
+
 
     public Node find(int key){
         Node current = root;
@@ -95,4 +103,22 @@ class Tree{
     }
   }
 }
+}
+
+class main{
+    public static void main(String[] args){
+        Tree tree = new Tree();
+        Scanner sc = new Scanner(System.in);
+        for(int counter=1;counter<=10;counter++){
+            tree.insert(sc.nextInt(),sc.nextDouble());
+        }
+
+        Node tallest = tree.maximum();
+        System.out.println(tallest.iData);
+      
+        Node smallest = tree.minimum();
+        System.out.println(smallest.iData);
+
+        tree.descendingOrder();
+    }
 }
