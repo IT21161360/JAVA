@@ -6,9 +6,11 @@ public class Node {
     public double dData;
     public Node leftChild;
     public Node rightChild;
+
     public Node(){
 
     }
+    
     public void displayNode(){
         System.out.println(iData);
         System.out.println(dData);
@@ -18,9 +20,32 @@ public class Node {
 }
 
 class Tree{
+
     public Node root;
     public Tree(){
         root = null;
+    }
+
+    public Node minimum(){
+        Node current = root;
+        while(current.leftChild!=null){
+            current = current.leftChild;
+        }
+        return current;
+    }
+
+    public Node maximum(){
+        Node current = root;
+        while(current.rightChild!=null){
+            current = current.rightChild;
+        }
+        return current;
+    }
+
+    public void descendingOrder(){
+         if(root!=null){
+            descendingOrder();
+         }
     }
 
     public Node find(int key){
@@ -38,7 +63,7 @@ class Tree{
     }
 
     public void insert(int id,double dd){
-        
+
         Node node = new Node();
         node.dData = dd;
         node.iData = id;
