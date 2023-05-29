@@ -20,6 +20,34 @@ class LinkedList {
         first = null;
     }
 
+
+     public void displayList(){
+        Link current = first;
+        while(current!=null){
+            current.displayLink();
+            current = current.next;
+        }
+     }
+
+
+     public boolean isEmpty(){
+        Link current = first;
+        if(current==null){
+            return true;
+        }else{
+            return false;
+        }
+     }
+
+     public void linkList(){
+        Link current = first;
+        if(current!=null){
+            current.displayLink();
+            current = current.next;
+        }
+     }
+
+
     public void displayLinkedList() {
         Link current = first;
         while (current != null) {
