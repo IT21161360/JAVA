@@ -10,7 +10,7 @@ public class Node {
     public Node(){
 
     }
-    
+
     public void displayNode(){
         System.out.println(iData);
         System.out.println(dData);
@@ -45,13 +45,14 @@ class Tree{
     public void descendingOrder(){
          if(root!=null){
             descendingOrder();
+            
          }
     }
 
     public Node find(int key){
         Node current = root;
         while(current.iData!=key){
-            if(key<current.dData){
+            if(key<current.iData){
                 current = current.leftChild;
             }else{
                 current = current.rightChild;
