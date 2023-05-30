@@ -29,12 +29,20 @@ class Tree{
         }
     }
 
+    public void Inorder(){
+        Inorder(root);
+    }
+
     private void preOrder(Node localRoot){
          if(localRoot!=null){
             localRoot.displayNode();
             preOrder(localRoot.leftChild);
             preOrder(localRoot.rightChild);
          }
+    }
+
+    public void preOrder(){
+        preOrder(root);
     }
 
     private void postorder(Node localRoot){
@@ -45,8 +53,20 @@ class Tree{
         }
     }
 
+    public void postorder(){
+        postorder(root);
+    }
+
     private void discendingorder(Node localRoot){
-        
+        if(localRoot!=null){
+            discendingorder(localRoot.rightChild);
+            localRoot.displayNode();
+            discendingorder(localRoot.leftChild);
+        }
+    }
+
+    public void discendingorder(){
+        discendingorder(root);
     }
    
     

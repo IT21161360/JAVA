@@ -119,6 +119,8 @@ class mainClass{
             links.displayLinkList();
         }
 
+        scanner.close();
+
     }
    
 

@@ -105,8 +105,8 @@ class Tree{
 }
 }
 
-class main{
-    public static void main(String[] args){
+class Main{
+    public static void main(String[] arrs){
         Tree tree = new Tree();
         Scanner sc = new Scanner(System.in);
         for(int counter=1;counter<=10;counter++){
@@ -120,5 +120,7 @@ class main{
         System.out.println(smallest.iData);
 
         tree.descendingOrder();
+
+        sc.close();
     }
 }

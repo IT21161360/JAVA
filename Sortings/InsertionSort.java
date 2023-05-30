@@ -3,6 +3,7 @@ package Sortings;
 public class InsertionSort {
     
     public static void insertSort(int array[]){
+
         for(int counter=1;counter<array.length;counter++){
             int key = array[counter];
             int i = counter-1;
@@ -12,6 +13,7 @@ public class InsertionSort {
             }
             array[i+1] = key;
         }
+        
     }
     
     public static void main (String[] args){
@@ -26,9 +28,5 @@ public class InsertionSort {
             System.out.print(array[counter]);
         }
     }
-
-
-
-
     
 }
