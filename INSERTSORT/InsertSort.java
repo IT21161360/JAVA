@@ -1,6 +1,9 @@
 package INSERTSORT;
 
+import java.util.Scanner;
+
 public class InsertSort {
+    
     public static void insertSort(int array[]){
          for(int counter=1;counter<array.length;counter++){
             int key = array[counter];
@@ -21,7 +24,9 @@ public class InsertSort {
 
     public static void main(String[] args){
         int array[] = {9,8,7,6,5,4,3,2};
+        Scanner sc = new Scanner(System.in);
         insertSort(array);
         printArray(array);
+        sc.close();
     }
 }
