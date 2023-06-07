@@ -113,9 +113,6 @@ class Tree{
          Node newNode = new Node();
          newNode.dData = dd;
          newNode.iData = id;
-
-        
-         
          if(root==null){
             root = newNode;
          }else{

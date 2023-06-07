@@ -4,6 +4,7 @@ public class Link {
 
      public int id;
      public Link next;
+     
      public Link(int s){
         id=s;
         next=null;
