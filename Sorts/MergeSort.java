@@ -3,7 +3,6 @@ package Sorts;
 public class MergeSort {
 
     public static void mergeSort(int array[],int low,int high){
-
         if(low<high){
         int mid = low + (high-low) / 2;
         mergeSort(array, low, mid);

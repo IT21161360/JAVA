@@ -1,8 +1,7 @@
 package Sorts;
 
 public class QuickSort {
-
-    public static void quickSort(int array[],int low,int high){
+   public static void quickSort(int array[],int low,int high){
         if(low<high){
         int pivortIndex = partition(array,low,high);
         quickSort(array, low, pivortIndex-1);

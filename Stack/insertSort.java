@@ -2,7 +2,7 @@ package Stack;
 
 public class insertSort {
     public static void insertionSort(int array[]){
-        for(int counter=0;counter<array.length;counter++){
+        for(int counter=1;counter<array.length;counter++){
             int key = array[counter];
             int i = counter -1;
             while(i>=0 && array[i]>key){
